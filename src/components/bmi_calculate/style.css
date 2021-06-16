@@ -4,3 +4,10 @@
     justify-content: space-around;
     height: 30vh;
 }
+
+input{
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    height: 25px;
+}

@@ -7,7 +7,8 @@ function Result() {
 
   return (
     <div className="result">
-      <p>Your bmi: {state.bmi}</p>
+      <h3>Your bmi: {state.bmi}</h3>
+      <h3>Weight Status: </h3>
     </div>
   );
 }

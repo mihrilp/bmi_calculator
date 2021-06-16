@@ -9,7 +9,7 @@ const Navbar = () => {
         Home
       </NavLink>
       <NavLink className="link" to="/diet-list">
-        Diet List
+        Diet Lists
       </NavLink>
     </div>
   );

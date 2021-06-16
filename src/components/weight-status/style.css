@@ -1,6 +1,6 @@
 .container{
-    display: flex;
     align-items: center;
+    margin-bottom: 40px;
 }
 
 .icon{
@@ -10,4 +10,5 @@
 .weightStatus{
     font-weight: bold;
     font-size: 20px;
+    margin-bottom: 20px;
 }

@@ -2,11 +2,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    color: #17283a;
     top: 0;
     font-size: 24px;
 }
 
 .link{
     text-decoration: none;
+    color: #012a4a;
+    font-weight: bold;
 }

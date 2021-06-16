@@ -4,8 +4,9 @@
 }
 
 .App {
+  text-align: center;
   min-height: 100vh;
-  background-color: #fad675;
+  background-color: #aed9e0;
   display: flex;
   flex-direction: column;
 }

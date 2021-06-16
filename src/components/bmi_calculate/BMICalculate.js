@@ -13,7 +13,7 @@ const Button = styled.button`
 `;
 
 function BMICalculate() {
-  const [data, setData] = useState({ weight: "", height: "", bmi: 0 });
+  const [data, setData] = useState({ weight: "", height: "", bmi: "" });
   const history = useHistory();
 
   useEffect(() => {
@@ -24,7 +24,6 @@ function BMICalculate() {
     const weight = data.weight;
     const height = data.height / 100;
     setData({ ...data, bmi: Math.round(weight / (height * height)) });
-    showResult();
   };
 
   const handleWeight = (e) => {
@@ -56,7 +55,7 @@ function BMICalculate() {
       <div>
         <label htmlFor="weight">Weight (in kg): </label>
         <input
-          type="number"
+          type="text"
           id="weight"
           value={data.weight}
           onChange={handleWeight}
@@ -65,13 +64,16 @@ function BMICalculate() {
       <div>
         <label htmlFor="height">Height (in cm): </label>
         <input
-          type="number"
+          type="text"
           id="height"
           value={data.height}
           onChange={handleHeight}
         />
       </div>
-      <Button onClick={calculate}>Calculate</Button>
+      <div className="button">
+        <Button onClick={calculate}>Calculate</Button>
+      </div>
+      {data.bmi !== "" && showResult()}
     </div>
   );
 }
