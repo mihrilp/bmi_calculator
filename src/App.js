@@ -1,18 +1,34 @@
 import "./App.css";
-import "./components/BMICalculate";
-import BMICalculate from "./components/BMICalculate";
+import {
+  BrowserRouter as Router,
+  NavLink,
+  Link,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Home from "./pages/Home";
+import DietList from "./pages/DietList";
+import Result from "./pages/result/Result";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="bmi2.png" alt="bmi" width="150" height="150" />
-        <h2>CALCULATOR</h2>
-      </header>
-      <main>
-        <BMICalculate />
-      </main>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <NavLink className="link" to="/">
+            Home
+          </NavLink>
+          <NavLink className="link" to="/diet-list">
+            Diet List
+          </NavLink>
+        </header>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/diet-list" component={DietList} />
+          <Route path="/result" component={Result} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
