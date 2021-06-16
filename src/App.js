@@ -1,11 +1,6 @@
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  NavLink,
-  Link,
-  Switch,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/Home";
 import DietList from "./pages/DietList";
 import Result from "./pages/result/Result";
@@ -15,12 +10,7 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <NavLink className="link" to="/">
-            Home
-          </NavLink>
-          <NavLink className="link" to="/diet-list">
-            Diet List
-          </NavLink>
+          <Navbar />
         </header>
         <Switch>
           <Route exact path="/" component={Home} />

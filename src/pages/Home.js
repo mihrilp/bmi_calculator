@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import BMICalculate from "../components/bmi_calculate/BMICalculate";
 
 function Home() {
   return (
     <div className="bmi-calculate">
-      <img src="bmi2.png" alt="bmi" width="150" height="150" />
-      <h2>CALCULATOR</h2>
+      <div className="logo" style={{ marginBottom: 50 }}>
+        <img src="bmi2.png" alt="bmi" width="100" height="100" />
+        <h3 style={{ color: "17283a" }}>CALCULATOR</h3>
+      </div>
       <BMICalculate />
     </div>
   );

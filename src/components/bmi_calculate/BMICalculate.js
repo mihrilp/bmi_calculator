@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
-import Result from "../../pages/result/Result";
 
 const Button = styled.button`
   color: "#fff";
@@ -37,8 +36,12 @@ function BMICalculate() {
   };
 
   const showResult = () => {
-    let path = `/result`;
-    history.push(path);
+    history.push({
+      pathname: "/result",
+      state: {
+        bmi: data.bmi,
+      },
+    });
   };
 
   return (
