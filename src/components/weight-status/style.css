@@ -12,3 +12,9 @@
     font-size: 20px;
     margin-bottom: 20px;
 }
+
+.title{
+    text-decoration: underline;
+    margin-bottom: 15px;
+    font-size: 20px;
+}

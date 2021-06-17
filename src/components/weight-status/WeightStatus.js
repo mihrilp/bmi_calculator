@@ -14,7 +14,7 @@ function WeightStatus({
       <div className="icon">{icon}</div>
       <p className="weightStatus">Weight Status: {weightStatus}</p>
       <div className="dietList">
-        <p>Diet list for you: </p>
+        <p className="title">Diet list for you: </p>
         <ul>
           <li>Breakfast: {breakfast}</li>
           <li>Lunch: {lunch} </li>

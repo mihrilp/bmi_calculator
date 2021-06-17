@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 
 const Button = styled.button`
   color: "#fff";
-  background-color: "#18293a";
+  background: #c33126;
   padding: 8px 16px;
   border-radius: 4px;
   border: none;
@@ -46,24 +46,23 @@ function BMICalculate() {
   return (
     <div className="form">
       <div>
-        <label htmlFor="gender">Gender: </label>
-        <select name="gender" id="gender">
+        <select name="gender" id="gender" className="gender">
           <option value="Female">Female</option>
           <option value="Male">Male</option>
         </select>
       </div>
       <div>
-        <label htmlFor="weight">Weight (in kg): </label>
         <input
           type="text"
           id="weight"
+          placeholder="Weight (in kg)"
           value={data.weight}
           onChange={handleWeight}
         />
       </div>
       <div>
-        <label htmlFor="height">Height (in cm): </label>
         <input
+          placeholder="Height (in cm)"
           type="text"
           id="height"
           value={data.height}
